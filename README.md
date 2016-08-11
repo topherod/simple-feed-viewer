@@ -1,66 +1,42 @@
 Digg Frontend Web Code Test
 ===============
 
-A coding test for [Digg](https://digg.com) Frontend candidates.
+A coding test for [Digg](https://digg.com) Frontend candidates. A live demo can be viewed at: http://christopherodriscoll.com/simple-feed-viewer
 
 
-## Welcome!
+## The Assignment!
 
-The assignment is: build a single-page web application for Digg that demonstrates your technical skills as well as your creativity and product-focused thought process. 
-
-Please read this entire documentation as it contains both the requirements for the assignment, as well as some hints to help you out.
-
-
-## The Basics
-
-Your assignment is to build a mini news-reading application for the web. The goal of this test is to get as much done as you can in **4 hours**. We'll provide the data sources and some files to get you started; the rest is up to you. Once you're done, please submit your code to us by sending us the link to your Github repo containing the your webapp.
+My assignment was to build a mini news-reading application for the web. The goal of this test was to get as much done as I could in **4 hours**.
 
 
 ## Requirements
 
-* You're building a single-page webapp. There should be no full-page refreshes.
-* You must include at least the following two components: **Feed Menu View** and **Feed Content View**. Requirements for these two components are detailed below.
-* You must use core HTML, CSS, and JavaScript. Feel free to use any "HTML5" APIs, bleeding edge CSS, and HTML elements that are supported by modern browsers, but you should not use any 3rd-party JavaScript/CSS libraries or frameworks.
-* The webapp should render and work properly in all modern browsers.
+* This is a single-page webapp (no full-page refreshes here).
+* Includes the following required components: **Feed Menu View** and **Feed Content View**.
+* This app uses core HTML, CSS, and JavaScript (no libraries).
+* This webapp renders and works properly in all modern browsers (and on mobile devices, too!).
 
 ### Feed Menu View
 
-1. For the mini news-reading application, you’ll present users with a menu of four news feeds to browse. We will limit this app to four feeds; the information about the feeds (urls, titles, etc) is below.
-2. The title of the feed should be visible in the menu. The interface for displaying the feed menu is your choice (tile, drawer with list-view, carousel, etc). Bonus points for using an image for each feed selection in the menu.
-3. When a feed is selected, the app will display the latest stories for that feed (see the next section).
+1. Users are presented with a menu of four news feeds to browse.
+2. The title of the feed is visible in the menu. Bonus points: each feed has it's own icon.
+3. When a feed is selected, the app displays the latest stories for that feed.
 
 
 ### Feed Content View
 
-1. When one of the four feeds is selected in the feed menu, the app should display a list of the latest stories from that feed.
-2. Please show at least the story title and domain for each story in the story list. 
-3. When a user chooses to read a story, by clicking/tapping, the story URL should load in a new window.
-4. Contents of these feeds should be fetched Asynchronously.
+1. When one of the four feeds is selected in the feed menu, the app displays a list of the latest stories from that feed.
+2. The story title and domain for each story are included in the story list. (Also included: short description and an image or image place holder in some cases)
+3. When a user chooses to read a story, by clicking/tapping, the story URL loads in a new window.
+4. Contents of these feeds are fetched Asynchronously.
 
 ## Bonus Points
 
-The requirements for this assignment are pretty loose, so any bells-and-whistles that you add to the user interface, visual design, or functionality can earn you bonus points. Be creative!
-
-A small and incomplete list of things we'd find impressive are: 
-
-* Design/interaction: Attractive design/layout; Logical UI; social/sharing features; 
-* Code quality: Good organization; re-usability; clear separation of presentation from functionality.
-* Data Persistence/updates: Whether the user has read the story; permalinks for Feed Content Views; Offline support, Polling for new stories; Notifications
-* Cross-device support: Older browsers; mobile/alternate devices.
-
-Again, these are just ideas. Build what feels right to you.
+* Social/sharing features!
+* Image placeholders for stories without images (or for tweets)
 
 
 ## Resources
-
-### Files
-
-Included in this repo are some files to help you get started.
-
-* **util.js:** A collection of helper methods, including *util.ajax()*, which supports JSONP. **Note:** this file may have a couple of bugs in it, so feel free to update it accordingly.
-* **index.html:** HTML file for the single-page app. When a user loads this file in their browser, the app should "just work."
-* **app.js:** Your application logic should live here. This file also contains some sample code for using the util.ajax() helper method. Feel free to edit as you please.
-* **app.css:** Your application styles should live here. 
 
 
 ### The Feeds
