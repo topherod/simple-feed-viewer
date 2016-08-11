@@ -96,3 +96,204 @@ main {
 	position: relative;
 	width: 100%;
 }
+
+/* MENU STYLES */
+
+.menu {
+	display: block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+.menu > .menu-item {
+	border: 1px solid #aaa;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 600;
+	line-height: 70px;
+	margin: .5%;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+	width: 90%;
+	transition: all .3s ease;
+	vertical-align: middle;
+}
+.menu > .menu-item span {
+	font-size: 2em;
+	line-height: 70px;
+	vertical-align: middle;
+}
+.menu > .menu-item.active, .menu > .menu-item:hover {
+	color: #fff;
+	background: #005be2;
+}
+.menu > .digg.active, .menu > .digg:hover {
+	background: #005be2;
+}
+.menu > .david_picks.active, .menu > .david_picks:hover {
+	background: #009900;
+}
+.menu > .politics.active, .menu > .politics:hover {
+	background: #990000;
+}
+.menu > .design.active, .menu > .design:hover {
+	background: #800080;
+}
+
+
+/* FEED STYLES */
+
+.feed {
+	display: block;
+	position: relative;
+	width: 100%;
+	text-align: center;
+}
+.feed-item-container {
+	display: inline-block;
+	margin-bottom: 2em;
+	opacity: 0;
+	text-align: left;
+	transition: all .3s ease;
+	vertical-align: top;
+	width: 90%;
+	animation: fadeIn ease 1;
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+}
+.feed-item-container .feed-item {
+	color: #aaa;
+	display: block;
+	transition: all .3s ease;
+}
+.feed-item-container .image-container {
+	width: 100%;
+	margin-bottom: .5em;
+}
+.feed-item-container .image {
+	display: inline-block;
+	vertical-align: middle;
+	height: auto;
+	width: 100%;
+}
+.feed-item-container .title {
+	font-size: 1.5em;
+	font-weight: bold;
+	line-height: 1.1em;
+	margin-bottom: .5em;
+}
+.feed-item-container .description {
+	margin-bottom: 1em;
+	word-wrap: break-word;
+	word-break: break-word;
+  hyphens: auto;
+}
+.feed-item-container .feed-item:hover {
+	color: #005be2;
+}
+.feed-item-container.digg .feed-item:hover {
+	color: #005be2;
+}
+.feed-item-container.david_picks .feed-item:hover {
+	color: #009900;
+}
+.feed-item-container.politics .feed-item:hover {
+	color: #990000;
+}
+.feed-item-container.design .feed-item:hover {
+	color: #800080;
+}
+
+.feed-item-container .share-container,
+.feed-item-container .domain-container {
+	line-height: 30px;
+}
+.feed-item-container .share-container {
+	display: inline-block;
+	width: 40%;
+}
+.feed-item-container .share-container a {
+	background: #aaa;
+	border-radius: 50%;
+	color: #fff;
+	display: inline-block;
+	font-size: .9em;
+	height: 30px;
+	line-height: 30px;
+	margin-right: .1em;
+	text-align: center;
+	transition: all .3s ease;
+	width: 30px;
+}
+.feed-item-container .share-container a:hover {
+	background: #005be2;
+}
+.feed-item-container .share-container a.fa-twitter:hover {
+	background: #00aced;
+}
+.feed-item-container .share-container a.fa-facebook:hover {
+	background: #3b5998;
+}
+.feed-item-container .domain-container {
+	display: inline-block;
+	width: 58%;
+	text-align: right;
+}
+.feed-item-container a.domain {
+	color: #aaa;
+	font-size: .7em;
+	font-weight: 600;
+	text-transform: uppercase;
+	transition: all .3s ease;
+}
+.feed-item-container a.domain:hover {
+	color: #666;
+	text-decoration: underline;
+}
+
+/* ANIMATION KEYFRAMES */
+
+@keyframes fadeIn { 
+	from { 
+		opacity:0; 
+	} 
+	to { 
+		opacity:1; 
+	} 
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 640px) {
+	.menu > .menu-item {
+		width: 40%;
+	}
+	.feed-item-container {
+		margin: 1em;
+		margin-bottom: 2em;
+		width: 40%;
+	}
+	.feed-item-container .image-container {
+		background: #000;
+		line-height: 200px;
+		max-height: 200px;
+		overflow: hidden;
+	}
+	h1 {
+		font-size: 3em;
+	}
+}
+@media (min-width: 1240px) {
+	.menu > .menu-item {
+		font-size: 1.2em;
+		width: 20%;
+	}
+	.feed-item-container {
+		width: 30%;
+	}
+}
+@media (min-width: 1500px) {
+	.feed-item-container {
+		width: 400px;
+	}	
+}
