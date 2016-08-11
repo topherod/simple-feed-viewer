@@ -36,8 +36,14 @@
           }
           
           feedHTML += '<div class="feed-item-container ' + group + '"><a href="' + url + '" target="_blank"  class="feed-item feed-item-' + i + '">';
-          if (typeof image !== "undefined") {
+          if (typeof image !== "undefined" && (imageURL.endsWith('.png') || imageURL.endsWith('.jpg') || imageURL.endsWith('.gif')) ) {
             feedHTML += '<div class="image-container"><img src="' + imageURL + '" class="image"></div>';
+          } else {
+            if (domain == 'twitter.com') {
+              feedHTML += '<div class="image-container"><img src="img/twitter.png" class="image"></div>';
+            } else {
+              feedHTML += '<div class="image-container"><img src="img/' + group + '.png" class="image"></div>';
+            }
           }
           feedHTML += '<h3 class="title">' + title + '</h3><p class="description">' + description + '</p></a>';
           // add share buttons
@@ -55,6 +61,15 @@
             e.preventDefault();
             window.open(this.href, 'ShareWindow', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
           });
+        }
+
+        // replace broken images
+        var allImages = document.getElementsByClassName('image');
+
+        for (var i = 0; i < allImages.length; i++) {
+          allImages[i].onerror = function () { 
+            this.src = 'img/' + group + '.png';
+          };
         }
 
       },
