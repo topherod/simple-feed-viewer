@@ -1,6 +1,9 @@
 // A collection of utility methods to help build the Simple Feed Viewer
 //
 
+//define global util variable (was local)
+var util = '';
+
 (function (window) {
 
     // Creates a wrapper function in the global scope that is deleted after it is invoked
@@ -23,7 +26,7 @@
     // Makes a JSONP request to an API endpoint
     // - This function should remain private to util.js
     function makeJSONPRequest(options) {
-        var head = document.getElementsByTagName('head');
+        var head = document.head || document.getElementsByTagName('head')[0]; //getElementsByTagName('head') needs an index value (but document.head also works for modern browsers)
         var scriptEl = document.createElement('script');
         var src = options.url;
 
@@ -53,7 +56,7 @@
     }
 
     // Public namespace for utility methods
-    var util = {
+    util = {
         // Helper noop 
         noop: function() {},
 
