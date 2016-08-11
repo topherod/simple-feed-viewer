@@ -15,11 +15,11 @@
   ];
   
   // Wrap API call in a function that can be called
-  function getTheFeed() {
+  function getTheFeed(group) {
     util.ajax({
       url: API_BASE_URL,
       data: {
-          group: 'digg'
+          group: group
       },
       success: function (data) {
 
@@ -31,7 +31,7 @@
           var url = data.mesg[i].url;
           var domain = data.mesg[i].domain;
           
-          feedHTML += '<div class="feed-item-container"><a href="' + url + '" target="_blank"  class="feed-item feed-item-' + i + '"><h3 class="title">' + title + '</h3><p class="description">' + description + '</p></a><div class="domain-container"><a href="http://' + domain + '" target="_blank" class="domain">' + domain + '</a></div></div>';
+          feedHTML += '<div class="feed-item-container ' + group + '"><a href="' + url + '" target="_blank"  class="feed-item feed-item-' + i + '"><h3 class="title">' + title + '</h3><p class="description">' + description + '</p></a><div class="domain-container"><a href="http://' + domain + '" target="_blank" class="domain">' + domain + '</a></div></div>';
 
         }
         // print the feed to the feed div
@@ -50,8 +50,10 @@
   // when a menu item is clicked
   for (var i = 0; i < menuItems.length; i++) {
     menuItems[i].addEventListener('click', function() {
-      // get the feed
-      getTheFeed();
+      // get the ID/group of the feed
+      var menuItemID = this.id;
+      // get the feed and pass the group to the function
+      getTheFeed(menuItemID);
     }, false);
   }
 
