@@ -41,9 +41,6 @@ My assignment was to build a mini news-reading application for the web. The goal
 
 ### The Feeds
 
-The four feeds to use in the application are as follows. These feeds are from an experimental data project that we built at Digg. The stories in each feed below represent trending stories from various Twitter accounts: digg employees, editor’s picks, political reporters and people in the design profession/community.
-These four feeds support JSONP callbacks. Also, the values of the 'screen_name' and 'sharers' fields for each story are Twitter usernames.
-
 ```
 title: “Digg”
 http://data.digg.com/api/v1/feed/trending/tweets?slug=digg
