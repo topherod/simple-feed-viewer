@@ -65,3 +65,34 @@ html, body {
 body {
 	overflow-x: hidden;
 }
+header {
+	padding: 2em;
+}
+h1, h2 {
+	line-height: 1.1em;
+	text-align: center;
+	text-transform: uppercase;
+}
+h1 {
+	font-size: 2em;
+	font-weight: 600;
+	margin-bottom: .1em;
+}
+h2 {
+	font-size: 1em;
+	font-weight: 200;
+}
+h2 span {
+	font-weight: 400;
+}
+h2 .fa-digg {
+	font-size: 2em;
+	margin-left: .1em;
+	position: relative;
+	top: -2px;
+	vertical-align: middle;
+}
+main {
+	position: relative;
+	width: 100%;
+}
